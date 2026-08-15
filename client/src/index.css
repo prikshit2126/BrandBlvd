@@ -1,0 +1,987 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/figtree";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Figtree Variable', sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+
+/* =========================================================
+   BRANDBLVD - MOBILE RESPONSIVE CSS
+   Desktop styles remain unchanged
+========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+a {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .container,
+    .page-container,
+    .shop-container,
+    .product-container,
+    .checkout-container,
+    .cart-container {
+        width: 92%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .grid,
+    .products-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- GLOBAL ---------- */
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: clamp(34px, 10vw, 52px);
+        line-height: 1.05;
+    }
+
+    h2 {
+        font-size: clamp(28px, 8vw, 40px);
+        line-height: 1.1;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+
+    /* ---------- COMMON CONTAINERS ---------- */
+
+    .container,
+    .page-container,
+    .shop-container,
+    .product-container,
+    .checkout-container,
+    .cart-container,
+    .orders-container {
+        width: calc(100% - 32px);
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    header,
+    .header,
+    .navbar,
+    .nav-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .header {
+        padding: 14px 16px;
+    }
+
+    .nav-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .logo {
+        font-size: 24px;
+        white-space: nowrap;
+    }
+
+    .nav-links {
+        display: none !important;
+    }
+
+    .navigation {
+        display: none !important;
+    }
+
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-menu,
+    .mobile-menu-button,
+    .menu-button {
+        display: flex;
+    }
+
+    /* Keep header icons usable */
+    .header-icons,
+    .nav-icons {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .header-icons button,
+    .nav-icons button {
+        padding: 5px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero,
+    .hero-section {
+        min-height: auto;
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 60px);
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons button,
+    .hero-buttons a {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       PRODUCT GRIDS
+    ===================================================== */
+
+    .products-grid,
+    .product-grid,
+    .shop-grid,
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        width: 100%;
+    }
+
+    .product-card {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+    }
+
+    .product-card h3,
+    .product-card h4 {
+        font-size: 14px;
+        line-height: 1.35;
+    }
+
+    .product-card p {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       SHOP FILTERS
+    ===================================================== */
+
+    .shop-layout {
+        display: block;
+    }
+
+    .shop-sidebar,
+    .filter-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .filters {
+        width: 100%;
+    }
+
+    .filter-row {
+        flex-wrap: wrap;
+    }
+
+    .filter-row > * {
+        max-width: 100%;
+    }
+
+    .sort-container {
+        width: 100%;
+    }
+
+    .sort-container select {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       PRODUCT DETAILS
+    ===================================================== */
+
+    .product-details,
+    .product-page,
+    .product-detail-container {
+        width: 100%;
+    }
+
+    .product-detail-grid,
+    .product-details-grid,
+    .product-page-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .product-image-section,
+    .product-gallery,
+    .product-images {
+        width: 100%;
+    }
+
+    .product-main-image {
+        width: 100%;
+        height: auto;
+        max-height: 75vh;
+        object-fit: contain;
+    }
+
+    .product-info,
+    .product-detail-info {
+        width: 100%;
+        padding: 0;
+    }
+
+    .product-info h1,
+    .product-detail-info h1 {
+        font-size: clamp(32px, 9vw, 48px);
+        line-height: 1.05;
+    }
+
+    .product-price {
+        font-size: 28px;
+    }
+
+    .size-options,
+    .color-options {
+        flex-wrap: wrap;
+    }
+
+    .size-options button,
+    .color-options button {
+        min-width: 48px;
+        min-height: 44px;
+    }
+
+    .quantity-selector {
+        width: fit-content;
+    }
+
+    .add-to-cart,
+    .buy-now {
+        width: 100%;
+        min-height: 52px;
+    }
+
+
+    /* =====================================================
+       PRODUCT REVIEWS
+    ===================================================== */
+
+    .reviews-section,
+    .review-section {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .review-card {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .review-form {
+        width: 100%;
+    }
+
+    .review-form textarea,
+    .review-form input {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       CART
+    ===================================================== */
+
+    .cart-layout,
+    .cart-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cart-items,
+    .cart-summary {
+        width: 100%;
+    }
+
+    .cart-item {
+        display: grid;
+        grid-template-columns: 80px minmax(0, 1fr);
+        gap: 12px;
+        padding: 14px 0;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .cart-item-details {
+        min-width: 0;
+    }
+
+    .cart-item-actions {
+        grid-column: 2;
+    }
+
+    .cart-summary {
+        position: static;
+    }
+
+    .checkout-button,
+    .cart-summary button {
+        width: 100%;
+        min-height: 50px;
+    }
+
+
+    /* =====================================================
+       CHECKOUT
+    ===================================================== */
+
+    .checkout-grid,
+    .checkout-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .checkout-form,
+    .checkout-summary {
+        width: 100%;
+    }
+
+    .checkout-form input,
+    .checkout-form select,
+    .checkout-form textarea {
+        width: 100%;
+        min-height: 46px;
+    }
+
+    .checkout-form .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .checkout-form .form-row > * {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       COUPON
+    ===================================================== */
+
+    .coupon-container,
+    .coupon-form {
+        width: 100%;
+    }
+
+    .coupon-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .coupon-form input,
+    .coupon-form button {
+        width: 100%;
+        min-height: 48px;
+    }
+
+
+    /* =====================================================
+       AUTH / LOGIN / REGISTER
+    ===================================================== */
+
+    .auth-container,
+    .login-container,
+    .register-container {
+        width: calc(100% - 32px);
+        max-width: 500px;
+        margin: 30px auto;
+    }
+
+    .auth-card,
+    .login-card,
+    .register-card {
+        width: 100%;
+        padding: 24px 18px;
+    }
+
+    .auth-card input,
+    .login-card input,
+    .register-card input {
+        width: 100%;
+    }
+
+    .auth-card button,
+    .login-card button,
+    .register-card button {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       WISHLIST
+    ===================================================== */
+
+    .wishlist-grid,
+    .wishlist-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+
+    /* =====================================================
+       ORDERS
+    ===================================================== */
+
+    .orders-table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .orders-table {
+        min-width: 650px;
+    }
+
+    .order-card {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       ADMIN
+    ===================================================== */
+
+    .admin-layout {
+        display: block;
+        width: 100%;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+    }
+
+    .admin-content {
+        width: 100%;
+        padding: 20px 16px;
+    }
+
+    .admin-dashboard {
+        width: 100%;
+    }
+
+    .admin-header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .admin-header h1 {
+        font-size: 40px;
+    }
+
+    .admin-stats,
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .admin-card {
+        min-width: 0;
+    }
+
+    .admin-actions,
+    .quick-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .admin-table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .admin-table {
+        min-width: 700px;
+    }
+
+
+    /* =====================================================
+       ADMIN FORMS
+    ===================================================== */
+
+    .admin-form {
+        width: 100%;
+    }
+
+    .admin-form input,
+    .admin-form textarea,
+    .admin-form select {
+        width: 100%;
+    }
+
+    .admin-form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .admin-form-row > * {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       ADMIN CUSTOMERS
+    ===================================================== */
+
+    .customers-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .customers-search {
+        width: 100%;
+    }
+
+    .customers-search input {
+        width: 100%;
+    }
+
+    .customer-table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .customer-table {
+        min-width: 700px;
+    }
+
+
+    /* =====================================================
+       ADMIN COUPONS
+    ===================================================== */
+
+    .coupons-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .coupon-table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .coupon-table {
+        min-width: 750px;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    button {
+        max-width: 100%;
+    }
+
+    .button-row {
+        flex-wrap: wrap;
+    }
+
+
+    /* =====================================================
+       MODALS
+    ===================================================== */
+
+    .modal-overlay {
+        padding: 16px;
+    }
+
+    .modal,
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer,
+    .footer {
+        width: 100%;
+    }
+
+    .footer-container,
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container,
+    .page-container,
+    .shop-container,
+    .product-container,
+    .checkout-container,
+    .cart-container,
+    .orders-container {
+        width: calc(100% - 24px);
+    }
+
+
+    /* Product grid becomes single column */
+    .products-grid,
+    .product-grid,
+    .shop-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .wishlist-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Header */
+    .header {
+        padding: 12px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .header-icons,
+    .nav-icons {
+        gap: 7px;
+    }
+
+
+    /* Hero */
+    .hero,
+    .hero-section {
+        padding: 45px 16px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    /* Product */
+    .product-info h1,
+    .product-detail-info h1 {
+        font-size: 34px;
+    }
+
+    .product-price {
+        font-size: 25px;
+    }
+
+
+    /* Admin */
+    .admin-content {
+        padding: 18px 12px;
+    }
+
+    .admin-header h1 {
+        font-size: 36px;
+    }
+
+    .admin-stats,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Cart */
+    .cart-item {
+        grid-template-columns: 65px minmax(0, 1fr);
+    }
+
+    .cart-item img {
+        width: 65px;
+        height: 85px;
+    }
+
+
+    /* Buttons */
+    .button-row {
+        flex-direction: column;
+    }
+
+    .button-row button,
+    .button-row a {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .container,
+    .page-container,
+    .shop-container,
+    .product-container,
+    .checkout-container,
+    .cart-container {
+        width: calc(100% - 20px);
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .product-info h1,
+    .product-detail-info h1 {
+        font-size: 30px;
+    }
+
+}

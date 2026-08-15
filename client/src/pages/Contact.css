@@ -1,0 +1,553 @@
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+
+.contact-page {
+    background: #f7f7f5;
+    color: #111;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.contact-hero {
+    padding: 120px 7% 100px;
+    background: #f7f7f5;
+}
+
+.contact-label {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #888;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.contact-hero h1 {
+    margin: 0;
+
+    font-size: clamp(60px, 9vw, 120px);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -6px;
+}
+
+.contact-hero p {
+    max-width: 550px;
+
+    margin: 30px 0 0;
+
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CONTACT CONTENT
+===================================================== */
+
+.contact-content {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 100px;
+
+    padding: 100px 7%;
+
+    background: #fff;
+}
+
+
+/* =====================================================
+   CONTACT INFO
+===================================================== */
+
+.contact-small-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #888;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.contact-info h2 {
+    margin: 0;
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+}
+
+.contact-description {
+    max-width: 440px;
+
+    margin: 28px 0 50px;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CONTACT DETAILS
+===================================================== */
+
+.contact-detail {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid #ddd;
+
+    border-radius: 50%;
+}
+
+.contact-detail span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #888;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.contact-detail a,
+.contact-detail p {
+    margin: 0;
+
+    color: #111;
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+.contact-detail a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.contact-form-wrapper {
+    width: 100%;
+
+    padding: 45px;
+
+    background: #f7f7f5;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+
+    color: #111;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 16px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 0;
+
+    outline: none;
+
+    background: #fff;
+
+    color: #111;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: border-color 0.2s;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 150px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #111;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.contact-submit {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 17px 20px;
+
+    border: none;
+
+    background: #111;
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.contact-submit:hover {
+    background: #333;
+}
+
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+.contact-success {
+    min-height: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.success-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #111;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+.contact-success h3 {
+    margin: 0;
+
+    font-size: 28px;
+
+    font-weight: 400;
+}
+
+.contact-success p {
+    max-width: 400px;
+
+    margin: 15px 0 25px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.contact-success button {
+    padding: 13px 20px;
+
+    border: none;
+
+    background: #111;
+
+    color: #fff;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   BOTTOM SECTION
+===================================================== */
+
+.contact-bottom {
+    padding: 100px 7%;
+
+    background: #f7f7f5;
+}
+
+.contact-bottom > span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #888;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.contact-bottom h2 {
+    margin: 0;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.contact-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+.contact-links a {
+    padding: 14px 20px;
+
+    border: 1px solid #ddd;
+
+    color: #111;
+
+    background: #fff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.contact-links a:hover {
+    background: #111;
+
+    color: #fff;
+
+    border-color: #111;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .contact-content {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        padding: 80px 5%;
+    }
+
+    .contact-hero {
+        padding: 90px 5% 75px;
+    }
+
+    .contact-bottom {
+        padding: 80px 5%;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .contact-hero {
+        padding: 70px 5% 60px;
+    }
+
+    .contact-hero h1 {
+        font-size: clamp(55px, 16vw, 80px);
+
+        letter-spacing: -4px;
+    }
+
+    .contact-hero p {
+        font-size: 14px;
+    }
+
+    .contact-content {
+        padding: 65px 5%;
+    }
+
+    .contact-info h2 {
+        font-size: 42px;
+
+        letter-spacing: -2px;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .contact-bottom {
+        padding: 65px 5%;
+    }
+
+    .contact-bottom h2 {
+        font-size: 42px;
+
+        letter-spacing: -2px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-links a {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .contact-hero h1 {
+        font-size: 52px;
+    }
+
+    .contact-info h2 {
+        font-size: 36px;
+    }
+
+    .contact-form-wrapper {
+        padding: 20px 15px;
+    }
+
+}

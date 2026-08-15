@@ -1,0 +1,1173 @@
+/* =========================================================
+   BRAND BLVD
+   EDIT PRODUCT
+========================================================= */
+
+.edit-product-page {
+    min-height: 100vh;
+
+    background: #f5f5f2;
+
+    color: #111;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.edit-product-topbar {
+    height: 74px;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #fff;
+
+    border-bottom: 1px solid #e5e5e2;
+}
+
+
+.edit-product-logo {
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+.edit-product-back-top {
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+
+.edit-product-back-top:hover {
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.edit-product-container {
+    width: min(1050px, 90%);
+
+    margin: 0 auto;
+
+    padding: 60px 0 100px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.edit-product-heading {
+    margin-bottom: 35px;
+}
+
+
+.edit-product-back {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 28px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.edit-product-back:hover {
+    color: #111;
+}
+
+
+.edit-product-heading > span {
+    color: #999;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.edit-product-heading h1 {
+    margin: 9px 0;
+
+    font-size: clamp(
+        45px,
+        7vw,
+        70px
+    );
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 600;
+}
+
+
+.edit-product-heading p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.edit-product-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.edit-card {
+    padding: 30px;
+
+    background: #fff;
+
+    border: 1px solid #e4e4e2;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.edit-card-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+.edit-card-heading > span {
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.edit-card-heading small {
+    color: #999;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.edit-card-heading h2 {
+    margin: 5px 0 0;
+
+    font-size: 20px;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   FIELDS
+========================================================= */
+
+.edit-fields {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 18px;
+}
+
+
+.edit-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.edit-field.full {
+    grid-column: 1 / -1;
+}
+
+
+.edit-field label {
+    color: #555;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.edit-field input,
+.edit-field textarea,
+.edit-field select {
+    width: 100%;
+
+    min-height: 45px;
+
+    box-sizing: border-box;
+
+    padding: 12px 13px;
+
+    border: 1px solid #ddd;
+
+    outline: none;
+
+    border-radius: 0;
+
+    background: #fff;
+
+    color: #111;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.edit-field textarea {
+    min-height: auto;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+.edit-field input:focus,
+.edit-field textarea:focus,
+.edit-field select:focus {
+    border-color: #111;
+
+    box-shadow:
+        0 0 0 1px #111;
+}
+
+
+/* =========================================================
+   PRICE INPUT
+========================================================= */
+
+.price-input-wrapper {
+    width: 100%;
+
+    min-height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.price-input-wrapper:focus-within {
+    border-color: #111;
+
+    box-shadow:
+        0 0 0 1px #111;
+}
+
+
+.price-input-wrapper > span {
+    width: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #888;
+
+    font-size: 13px;
+
+    border-right: 1px solid #eee;
+}
+
+
+.price-input-wrapper input {
+    min-height: 43px;
+
+    flex: 1;
+
+    padding: 10px 12px;
+
+    border: none;
+
+    outline: none;
+
+    box-shadow: none;
+
+    font-size: 12px;
+}
+
+
+.price-input-wrapper input:focus {
+    border: none;
+
+    box-shadow: none;
+}
+
+
+/* Remove number arrows */
+
+.price-input-wrapper input::-webkit-inner-spin-button,
+.price-input-wrapper input::-webkit-outer-spin-button {
+    margin: 0;
+
+    -webkit-appearance: none;
+}
+
+
+.price-input-wrapper input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+/* =============================-============================
+   FIELD HELP
+========================================================= */
+
+.field-help {
+    color: #999;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   SALE PREVIEW
+========================================================= */
+
+.edit-sale-preview {
+    position: relative;
+
+    min-height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 18px 20px;
+
+    overflow: hidden;
+
+    background: #f7f7f4;
+
+    border: 1px solid #deded9;
+}
+
+
+.edit-sale-preview-badge {
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    padding: 7px 10px;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+
+.edit-sale-preview-content {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+}
+
+
+.edit-sale-preview-content > span {
+    color: #999;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.edit-sale-preview-content strong {
+    font-size: 20px;
+
+    letter-spacing: -0.5px;
+}
+
+
+.edit-sale-preview-content del {
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+.edit-sale-preview-content b {
+    padding: 5px 8px;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 8px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+.edit-image-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+.edit-image {
+    position: relative;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+
+.edit-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.edit-image button {
+    position: absolute;
+
+    top: 7px;
+
+    right: 7px;
+
+    width: 28px;
+
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: #111;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 8px rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+}
+
+
+.edit-image button:hover {
+    background: #111;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   IMAGE UPLOAD
+========================================================= */
+
+.edit-image-upload {
+    min-height: 130px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px dashed #bbb;
+
+    background: #fafafa;
+
+    color: #111;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.edit-image-upload:hover {
+    background: #f4f4f1;
+
+    border-color: #111;
+}
+
+
+.edit-image-upload strong {
+    font-size: 11px;
+}
+
+
+.edit-image-upload small {
+    color: #999;
+
+    font-size: 9px;
+}
+
+
+.edit-image-upload input {
+    display: none;
+}
+
+
+/* =========================================================
+   PRODUCT OPTIONS
+========================================================= */
+
+.product-option-group {
+    margin-top: 28px;
+}
+
+
+.product-option-group:first-of-type {
+    margin-top: 0;
+}
+
+
+.product-option-group > label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #555;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.option-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+
+.option-button {
+    min-width: 52px;
+
+    height: 40px;
+
+    padding: 0 15px;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    color: #555;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.option-button:hover {
+    border-color: #111;
+
+    color: #111;
+}
+
+
+.option-button.active {
+    background: #111;
+
+    border-color: #111;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   CUSTOM COLOR
+========================================================= */
+
+.custom-color-row {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    max-width: 500px;
+}
+
+
+.custom-color-row input {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 40px;
+
+    padding: 0 13px;
+
+    border: 1px solid #ddd;
+
+    outline: none;
+
+    background: #fff;
+
+    color: #111;
+
+    font-family: inherit;
+
+    font-size: 11px;
+}
+
+
+.custom-color-row input:focus {
+    border-color: #111;
+}
+
+
+.custom-color-row button {
+    height: 40px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    background: #111;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease;
+}
+
+
+.custom-color-row button:hover {
+    background: #333;
+}
+
+
+/* =========================================================
+   SELECTED COLORS
+========================================================= */
+
+.selected-colors {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+
+.selected-color {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 10px;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.selected-color button {
+    width: 16px;
+
+    height: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   STORE SETTINGS
+========================================================= */
+
+.edit-featured {
+    display: grid;
+
+    grid-template-columns:
+        20px
+        auto
+        1fr;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 17px;
+
+    margin-top: 10px;
+
+    border: 1px solid #e5e5e2;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.edit-featured:hover {
+    border-color: #bbb;
+
+    background: #fafaf8;
+}
+
+
+.edit-featured input {
+    width: 16px;
+
+    height: 16px;
+
+    margin: 0;
+
+    accent-color: #111;
+}
+
+
+.edit-featured span {
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.edit-featured small {
+    color: #999;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.edit-error,
+.edit-success {
+    padding: 13px;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+.edit-error {
+    background: #fff4f4;
+
+    border: 1px solid #edcaca;
+
+    color: #a33;
+}
+
+
+.edit-success {
+    background: #f1faf3;
+
+    border: 1px solid #c0dfc7;
+
+    color: #28733a;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.edit-submit {
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    background: #111;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease;
+}
+
+
+.edit-submit:hover {
+    background: #2c2c2c;
+}
+
+
+.edit-submit:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.edit-product-loading {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f5f5f2;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .edit-product-container {
+        width: 92%;
+    }
+
+
+    .edit-fields {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+
+    .edit-image-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .edit-product-topbar {
+        padding: 0 4%;
+    }
+
+
+    .edit-product-container {
+        width: 92%;
+
+        padding-top: 45px;
+
+        padding-bottom: 70px;
+    }
+
+
+    .edit-card {
+        padding: 20px;
+    }
+
+
+    .edit-fields {
+        grid-template-columns: 1fr;
+    }
+
+
+    .edit-field.full {
+        grid-column: auto;
+    }
+
+
+    .edit-image-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .edit-featured {
+        grid-template-columns:
+            20px
+            1fr;
+    }
+
+
+    .edit-featured small {
+        grid-column: 2;
+    }
+
+
+    .edit-sale-preview {
+        padding: 18px;
+    }
+
+
+    .edit-sale-preview-content {
+        gap: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .edit-product-heading h1 {
+        font-size: 48px;
+
+        letter-spacing: -2.5px;
+    }
+
+
+    .edit-card {
+        padding: 17px;
+    }
+
+
+    .edit-card-heading {
+        margin-bottom: 22px;
+    }
+
+
+    .custom-color-row {
+        flex-direction: column;
+    }
+
+
+    .custom-color-row button {
+        width: 100%;
+    }
+
+
+    .edit-sale-preview-content {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .edit-sale-preview-content > span {
+        margin-bottom: 2px;
+    }
+
+}

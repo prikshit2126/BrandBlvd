@@ -1,0 +1,484 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  color: white;
+
+  background: transparent;
+
+  transition:
+    background 0.35s ease,
+    backdrop-filter 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.navbar-scrolled {
+  background: rgba(10, 10, 10, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-inner {
+  height: 78px;
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.navbar-logo {
+  color: white;
+  text-decoration: none;
+
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  white-space: nowrap;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.desktop-nav a {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+.desktop-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: white;
+
+  transition: width 0.25s ease;
+}
+
+.desktop-nav a:hover {
+  color: white;
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-icon,
+.mobile-menu-button {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  border-radius: 50%;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-icon:hover,
+.mobile-menu-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.nav-count {
+  position: absolute;
+
+  top: 3px;
+  right: 2px;
+
+  min-width: 15px;
+  height: 15px;
+
+  padding: 0 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+  color: #111;
+
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+/* Search */
+
+.search-panel {
+  max-height: 0;
+  overflow: hidden;
+
+  opacity: 0;
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    padding 0.4s ease;
+}
+
+.search-panel-open {
+  max-height: 100px;
+  padding: 0 6% 18px;
+
+  opacity: 1;
+}
+
+.search-panel form {
+  max-width: 700px;
+  margin: 0 auto;
+
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 8px 0 18px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(15px);
+}
+
+.search-panel form svg {
+  flex-shrink: 0;
+}
+
+.search-panel input {
+  flex: 1;
+
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+.search-panel input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.search-panel button {
+  height: 40px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 22px;
+
+  background: white;
+  color: #111;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* Mobile */
+
+.mobile-nav {
+  position: fixed;
+
+  top: 78px;
+  left: 0;
+
+  width: 100%;
+
+  padding: 0 7%;
+
+  max-height: 0;
+  overflow: hidden;
+
+  opacity: 0;
+
+  background: rgba(10, 10, 10, 0.96);
+
+  backdrop-filter: blur(20px);
+
+  z-index: 999;
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    padding 0.4s ease;
+}
+
+.mobile-nav-open {
+  max-height: 500px;
+  padding-top: 22px;
+  padding-bottom: 28px;
+
+  opacity: 1;
+}
+
+.mobile-nav a {
+  display: block;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
+  .navbar-inner {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-logo {
+    font-size: 21px;
+  }
+
+  .navbar-actions {
+    gap: 2px;
+  }
+
+  .nav-icon,
+  .mobile-menu-button {
+    width: 37px;
+    height: 37px;
+  }
+
+  .search-panel-open {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .search-panel form {
+    height: 48px;
+  }
+
+  .search-panel button {
+    padding: 0 14px;
+  }
+}
+/* Solid navbar on inner pages */
+
+.navbar-solid {
+  background: #fff;
+  color: #111;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.navbar-solid .navbar-logo,
+.navbar-solid .desktop-nav a,
+.navbar-solid .nav-icon,
+.navbar-solid .mobile-menu-button {
+  color: #111;
+}
+
+.navbar-solid .desktop-nav a::after {
+  background: #111;
+}
+
+.navbar-solid .nav-icon:hover,
+.navbar-solid .mobile-menu-button:hover {
+  background: #f1f1f1;
+}
+
+.navbar-solid .nav-count {
+  background: #111;
+  color: #fff;
+}
+
+/* When scrolling on homepage */
+
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid #e8e8e8;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-scrolled .navbar-logo,
+.navbar-scrolled .desktop-nav a,
+.navbar-scrolled .nav-icon,
+.navbar-scrolled .mobile-menu-button {
+  color: #111;
+}
+
+.navbar-scrolled .desktop-nav a::after {
+  background: #111;
+}
+
+.navbar-scrolled .nav-icon:hover,
+.navbar-scrolled .mobile-menu-button:hover {
+  background: #f1f1f1;
+}
+
+.navbar-scrolled .nav-count {
+  background: #111;
+  color: #fff;
+}
+.navbar-solid .search-panel form,
+.navbar-scrolled .search-panel form {
+  background: #f5f5f5;
+  border-color: #ddd;
+}
+
+.navbar-solid .search-panel input,
+.navbar-scrolled .search-panel input {
+  color: #111;
+}
+
+.navbar-solid .search-panel input::placeholder,
+.navbar-scrolled .search-panel input::placeholder {
+  color: #888;
+}
+/* =====================================================
+   ADMIN BUTTON
+===================================================== */
+
+.nav-admin-button {
+    min-height: 34px;
+
+    padding: 0 11px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid #111;
+
+    background: #111;
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.nav-admin-button:hover {
+    background: #333;
+    border-color: #333;
+}
+
+
+/* =====================================================
+   MOBILE ADMIN LINK
+===================================================== */
+
+.mobile-admin-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    padding: 15px;
+
+    background: #111;
+
+    color: #fff !important;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.mobile-admin-link:hover {
+    background: #333;
+}

@@ -1,0 +1,488 @@
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+    width: 100%;
+    min-width: 0;
+    background: #fff;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #f5f5f3;
+}
+
+
+.product-image-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+
+.product-card:hover .product-image {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   SALE BADGE
+========================================================= */
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    z-index: 3;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 9px;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   OUT OF STOCK
+========================================================= */
+
+.out-of-stock {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+
+    z-index: 4;
+
+    padding: 7px 10px;
+
+    background: #fff;
+    color: #111;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+.wishlist-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    z-index: 5;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #fff;
+    color: #111;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.wishlist-button:hover {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   QUICK CART
+========================================================= */
+
+.quick-cart {
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    z-index: 5;
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: none;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.quick-cart:hover {
+    background: #222;
+}
+
+
+.quick-cart:disabled {
+    background: #777;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.product-info {
+    padding-top: 12px;
+    min-width: 0;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.product-brand {
+    margin: 0 0 5px;
+
+    color: #888;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PRODUCT NAME
+========================================================= */
+
+.product-name {
+    display: block;
+
+    margin: 0;
+
+    color: #111;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.product-rating {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 7px;
+
+    color: #777;
+
+    font-size: 9px;
+}
+
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.product-price {
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 4px;
+
+    min-width: 0;
+}
+
+
+/* Price + original price */
+
+.price-main {
+    display: flex;
+    align-items: baseline;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+
+.price-main strong {
+    color: #111;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+.old-price {
+    color: #888;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    text-decoration: line-through;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DISCOUNT
+========================================================= */
+
+.discount-text {
+    display: block;
+
+    color: #111;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SALE LABEL
+========================================================= */
+
+.product-sale-label {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777;
+
+    font-size: 9px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .product-image-wrapper {
+        aspect-ratio: 3 / 4;
+    }
+
+    .wishlist-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .quick-cart {
+        height: 38px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .product-info {
+        padding-top: 9px;
+    }
+
+    .product-brand {
+        font-size: 8px;
+        margin-bottom: 4px;
+    }
+
+    .product-name {
+        font-size: 11px;
+    }
+
+    .product-rating {
+        margin-top: 5px;
+        font-size: 8px;
+    }
+
+    .product-rating svg {
+        width: 10px;
+        height: 10px;
+    }
+
+    .product-price {
+        margin-top: 7px;
+        gap: 3px;
+    }
+
+    .price-main {
+        gap: 6px;
+    }
+
+    .price-main strong {
+        font-size: 13px;
+    }
+
+    .old-price {
+        font-size: 9px;
+    }
+
+    .discount-text {
+        font-size: 9px;
+    }
+
+    .product-sale-label {
+        font-size: 8px;
+    }
+
+    .product-badge {
+        top: 7px;
+        left: 7px;
+
+        padding: 5px 7px;
+
+        font-size: 8px;
+    }
+
+    .wishlist-button {
+        top: 7px;
+        right: 7px;
+
+        width: 32px;
+        height: 32px;
+    }
+
+    .wishlist-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .quick-cart {
+        left: 7px;
+        right: 7px;
+        bottom: 7px;
+
+        height: 34px;
+
+        font-size: 8px;
+    }
+
+    .quick-cart svg {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .price-main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .old-price {
+        font-size: 9px;
+    }
+
+    .discount-text {
+        font-size: 8px;
+    }
+
+}
