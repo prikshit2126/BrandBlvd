@@ -24,7 +24,7 @@ const addressRoutes = require("./routes/addressRoutes");
 const inventoryRoutes = require("./routes/inventoryRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 const userRoutes = require("./routes/userRoutes");
-const subscriberRoutes = require("./routes/SubscriberRoutes");
+const subscriberRoutes = require("./routes/subscriberRoutes");
 const protect = require("./middleware/authMiddleware");
 const errorHandler = require("./middleware/errorMiddleware");
 const { swaggerUi, specs } = require("./swagger/swagger");
@@ -87,7 +87,7 @@ app.use("/api/dashboard", dashboardRoutes);
 
 app.use("/api/users", userRoutes);
 
-app.use("/api/subscribers", SubscriberRoutes);
+app.use("/api/subscribers", subscriberRoutes);
 
 // Test Route
 
