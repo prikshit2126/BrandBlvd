@@ -87,7 +87,7 @@ app.use("/api/dashboard", dashboardRoutes);
 
 app.use("/api/users", userRoutes);
 
-app.use("/api/subscribers", subscriberRoutes);
+app.use("/api/subscribers", SubscriberRoutes);
 
 // Test Route
 
